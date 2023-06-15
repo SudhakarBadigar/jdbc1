@@ -1,0 +1,14 @@
+package com.pro.sudhi;
+
+public class Test {
+	int x = 10;
+	
+	Test(){
+		System.out.println("object created " + this.x);
+		x=200;
+		}
+	
+	void m1() {
+		System.out.println("m1() in Test class");
+	}
+}

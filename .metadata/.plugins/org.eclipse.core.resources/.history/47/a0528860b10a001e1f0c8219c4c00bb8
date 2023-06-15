@@ -1,0 +1,14 @@
+package com.pro.sudhi;
+import java.sql.*;
+public class JdbcPreparedStatement {
+
+	public static void main(String[] args) {
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			System.out.println("Driver class loaded and registered");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

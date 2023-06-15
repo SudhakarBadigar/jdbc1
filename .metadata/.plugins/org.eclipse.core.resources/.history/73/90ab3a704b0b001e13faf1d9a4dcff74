@@ -1,0 +1,42 @@
+package com.jdbc.Preparestmt.dynamic;
+import java.sql.*;
+import java.util.Scanner;
+
+public class DynamicUpdatePrstmt {
+
+	public static void main(String[] args) {
+	        Connection con = null;
+	        PreparedStatement pstmt = null;
+	        String query = "update junejdbc.employee set ename=?,esal=? where empno = ?";
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			System.out.println("Driver class loaded and registered");
+			
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/junejdbc?user=root&password=LordDattatreya1!");
+			System.out.println("connection established");
+			
+			pstmt = con.prepareStatement(query);
+			while(true) {
+				System.out.println("Enter the values to update");
+				Scanner scan = new Scanner(System.in);				
+				System.out.println("enter the Name to update ");
+				String a = scan.next();
+				System.out.println("Enter the salary to update ");
+				Double b = scan.nextDouble();
+				System.out.println("enter the row(pk) you want to update");
+				int c = scan.nextInt();
+				pstmt.setString(2, a);
+				pstmt.setDouble(3, b);
+				pstmt.setInt(1, c);
+				int e = pstmt.executeUpdate(query);
+				System.out.println("Executed " +e);
+				
+			}
+			
+			
+			
+		} catch (ClassNotFoundException | SQLException e) {
+			e.printStackTrace();
+		}
+	}
+}

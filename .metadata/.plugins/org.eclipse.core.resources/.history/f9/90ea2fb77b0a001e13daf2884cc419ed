@@ -1,0 +1,11 @@
+package com.pro.sudhi;
+//1st step
+import java.sql.*;
+
+public class JdbcProg2 {
+	public static void main(String[] args) {
+		//2nd step
+		Connection con =  Class.forName("com.mysql.cj.jdbc.Driver");
+	}
+
+}

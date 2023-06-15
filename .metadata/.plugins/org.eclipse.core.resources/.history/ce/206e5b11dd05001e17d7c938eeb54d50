@@ -1,0 +1,6 @@
+package com.pro.sudhi;
+
+public interface Iswitch {
+	 void on();
+	public abstract void off();
+}

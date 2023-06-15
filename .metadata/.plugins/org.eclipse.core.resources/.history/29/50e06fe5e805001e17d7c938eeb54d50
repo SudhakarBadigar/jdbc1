@@ -1,0 +1,12 @@
+package com.kfcApp;
+
+import java.util.Scanner;
+
+public class Customer {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("How do you like to dine? \n1.Dine-in\n2.Delivery");
+		String choice = scan.next();
+	}
+
+}

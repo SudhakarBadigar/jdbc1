@@ -1,0 +1,16 @@
+package com.mysqlQuery;
+//1st step
+import java.sql.*;
+public class DmlQuery {
+	public static void main(String[] args) {
+		//2ndstep
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			System.out.println("Driver class is loaded and registered");
+			
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

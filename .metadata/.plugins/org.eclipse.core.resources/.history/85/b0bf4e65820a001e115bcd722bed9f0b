@@ -1,0 +1,19 @@
+package com.pro.sudhi;
+//1st step
+import java.sql.*;
+
+public class JdbcProg2 {
+	public static void main(String[] args) {
+		Connection con;
+		
+	try {
+		//2nd step
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		System.out.println("connection and registration done");
+	} catch (ClassNotFoundException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	}
+
+}

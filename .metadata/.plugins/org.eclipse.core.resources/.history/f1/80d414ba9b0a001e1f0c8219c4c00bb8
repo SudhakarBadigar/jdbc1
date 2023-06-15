@@ -1,0 +1,33 @@
+package com.mysqlQuery;
+//1st step
+import java.sql.*;
+public class DmlQuery {
+	public static void main(String[] args) {
+		Connection con = null;
+		Statement stmt = null;
+		//String query ="insert into sudhisqljdbc.student values(5,'Hritik','javascript',22000.50);";
+		String query = "update sudhisqljdbc.student set student_name='sudhi',student_fees=20000 where student_id = 1";
+		try {
+			//2ndstep
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			System.out.println("Driver class is loaded and registered");
+
+			//3rd step
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/junejdbc?user=root&password=LordDattatreya1!");
+			System.out.println("connected to database");
+			
+			//4th step
+			stmt = con.createStatement();
+			System.out.println("platform created");
+			
+			//5th step
+			int b = stmt.executeUpdate(query);
+			System.out.println("Rows Affected = " + b);
+			
+			
+		} catch (ClassNotFoundException | SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

@@ -1,0 +1,6 @@
+//WAP to insert,update,delete a record in a table.
+package com.pro.sudhi;
+
+public class Jdbcprog5 {
+
+}

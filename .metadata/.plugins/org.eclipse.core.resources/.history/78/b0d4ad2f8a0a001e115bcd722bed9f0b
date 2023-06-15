@@ -1,0 +1,16 @@
+//WAP TO UPDATE THE TABLE IN EMPLOYEE TABLE.
+package com.pro.sudhi;
+//1ST STEP
+import java.sql.*;
+public class Jdbcprog3 {
+	public static void main(String[] args) {
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			System.out.println("Driver class loaded and Registered");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

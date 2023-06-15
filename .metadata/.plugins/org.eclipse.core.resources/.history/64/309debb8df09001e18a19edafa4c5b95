@@ -1,0 +1,19 @@
+package com.pro.sudhi;
+//1st step
+import java.sql.*;
+public class JdbcProg1 {
+	public static void main(String[] args) {
+		Connection con;
+		
+		//2nd step
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			System.out.println("Driver class Loaded and Registered");
+			con =  DriverManager.getConnection("jdbc:mysql://localhost:3306?user=root&password=LordDattatreya1!");
+			System.out.println("connection established");
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

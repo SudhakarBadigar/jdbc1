@@ -1,0 +1,10 @@
+//WAP to delete the rows in the table
+package com.pro.sudhi;
+//1st step
+import java.sql.*;
+public class Jdbcprog4 {
+	public static void main(String[] args) {
+		Class.forName("com.mysql.jdbc.Driver");
+	}
+
+}

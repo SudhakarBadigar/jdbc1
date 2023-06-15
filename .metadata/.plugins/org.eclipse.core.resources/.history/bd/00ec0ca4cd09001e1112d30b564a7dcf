@@ -1,0 +1,14 @@
+package com.pro.sudhi;
+import java.sql.*;
+public class JdbcProg1 {
+	public static void main(String[] args) {
+		try {
+			Class.forName("");
+			System.out.println("Driver class Loaded and Registered");
+		} catch (ClassNotFoundException e) {
+			System.err.println("Exception");
+			e.printStackTrace();
+		}
+	}
+
+}

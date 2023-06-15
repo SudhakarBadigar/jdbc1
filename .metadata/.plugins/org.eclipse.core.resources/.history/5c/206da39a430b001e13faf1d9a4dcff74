@@ -1,0 +1,5 @@
+package com.jdbc.Preparestmt.dynamic;
+
+public class DynamicUpdatePrstmt {
+
+}
