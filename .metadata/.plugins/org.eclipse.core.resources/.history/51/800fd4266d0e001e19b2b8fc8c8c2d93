@@ -1,0 +1,57 @@
+package com.jdbc.Preparestmt.dynamic;
+import java.sql.*;
+import java.util.Scanner;
+
+public class FetchingDataResultset {
+	public static void main(String[] args) {
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String query = "select * from junejdbc.employee where empno=?;";
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			System.out.println("Driver class is loaded and registered");
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/junejdbc?user=root&password=LordDattatreya1!");
+			System.out.println("connection established between java app and database");
+			pstmt=con.prepareStatement(query);
+			System.out.println("platform or statement created");
+			Scanner scan = new Scanner(System.in);
+			System.out.println("enter the empno you want to fetch?");
+			int f = scan.nextInt();	
+			pstmt.setInt(1,f);
+			rs = pstmt.executeQuery();//5thstep
+			if(rs.next()) {
+				int empno1 = rs.getInt(1);
+				String empname1 = rs.getString(2);
+				double empsal1 = rs.getDouble(3);
+				System.out.println("Details of empno: " + empno1 + " empname: " + empname1 + " empsal: " +empsal1);
+			}
+			else {
+				System.out.println("No such records");
+				
+			}
+			scan.close();
+			
+		} catch (ClassNotFoundException | SQLException e) {
+			e.printStackTrace();
+		}
+		
+		finally {
+			if(con != null && pstmt !=null && rs != null) {
+				try {
+					con.close();
+					pstmt.close();
+					rs.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+		
+				
+			}
+		}
+		
+		
+		
+	}
+
+}
