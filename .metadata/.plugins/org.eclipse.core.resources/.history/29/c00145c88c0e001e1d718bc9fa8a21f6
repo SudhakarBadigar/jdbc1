@@ -1,0 +1,35 @@
+package com.jdbc.Preparestmt.dynamic;
+import java.sql.*;
+
+public class BatchUpdate1 {
+ public static void main(String[] args) {
+     Connection con= null;
+     Statement stmt=null;
+     String inquery = "insert into junejdbc.employee values(12,'dinga',1234.22);";
+     String delquery = "delete from junejdbc.employee where empno = 3;";
+     String upquery = "update junejdbc.employee set esal = 100.00,ename = 'mysore' where empno = 6; ";
+	 try {
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		System.out.println("driver loaded");
+		con = DriverManager.getConnection("jdbc:mysql://localhost:3306/junejdbc?user=root&password=LordDattatreya1!");
+		System.out.println("connected to database");
+		stmt=con.createStatement();
+		//adding into group using addBatch()
+		stmt.addBatch(inquery);
+		stmt.addBatch(delquery);
+		stmt.addBatch(upquery);
+
+		int[] subBatch = stmt.executeBatch();
+		
+		for(int s: subBatch) {
+			System.out.println("Batch Executed"+s);
+		}
+		
+		
+		
+		stmt=con.createStatement();
+		} catch (ClassNotFoundException | SQLException e) {
+		e.printStackTrace();
+	}
+}
+}
