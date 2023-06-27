@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>FirstServletsudhi</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file> 
+    <welcome-file>Login.jsp</welcome-file> 
+       
+  </welcome-file-list>
+  <!--OurServlet1 mapping -->
+  <servlet-mapping>
+	  <servlet-name>OurServlet1</servlet-name>
+	  <url-pattern>/fs</url-pattern>
+  </servlet-mapping>
+  
+  <!-- LoginServlet Mapping  -->
+  <servlet-mapping>
+  <servlet-name>LoginServlet</servlet-name>
+  <url-pattern>/ls</url-pattern>
+  </servlet-mapping>
+   
+  <servlet>
+  	<servlet-name>OurServlet1</servlet-name>
+  	<servlet-class>com.jsp.servletProject.OurServlet1</servlet-class>
+  </servlet>
+  
+  
+  <servlet>
+  <servlet-name>LoginServlet</servlet-name>
+  <servlet-class>com.jsp.servletProject.LoginServlet</servlet-class>
+  </servlet>
+  
+</web-app>
