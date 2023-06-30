@@ -17,7 +17,7 @@ public class OurServlet1 extends HttpServlet{
 		String phno =  req.getParameter("phno");
 		String add = req.getParameter("add");
 		PrintWriter out = resp.getWriter();
-		out.print("<html><body bgcolor='FFA200'><h1>"
+		out.println("<html><body bgcolor='FFA200'><h1>"
 				+ "congrats your data is recorded successfully "+fname
 						+ "\n" + lname 
 						+ "\n" + email

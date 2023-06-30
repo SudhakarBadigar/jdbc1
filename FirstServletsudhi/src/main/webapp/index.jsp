@@ -6,20 +6,20 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body bgcolor="#F7EF8A" >
-<div align="center" >
-<h1>Welcome to my Blog..</h1>
-<h2>Please provide the details</h2>
-<form action="fs" method="post">
-FirstName: <input type="text" name="fname"> <br><br>
-LastName: <input type="text" name="lname"><br><br>
-email:    <input type="text" name="email"><br> <br>
-password: <input type ="text" name ="pwd"> <br> <br>
-phone:    <input type ="text" name ="phno"><br><br>
-address:  <input type = "text" name = "add"><br><br>
-<input type="submit" value="Request">
+<body bgcolor = "#F7EF8A">
+
+<div align="center">
+<form action="ls">
+
+<h2>Welcome to signIn page..!</h2>
+ email: <input type = "text" name = "email"> <br><br>
+ password: <input type = "text" name ="pwd"><br><br>
+ <input type = "submit" value = "Login">
+ <a href= "signup.jsp" >SignUp</a>
+ <!-- signup: <input type ="text" href<%= "signup.jsp"%> > -->
 </form>
 </div>
+
 
 </body>
 </html>
